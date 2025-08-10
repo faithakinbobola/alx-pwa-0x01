@@ -1,16 +1,14 @@
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import { ComponentProps } from "@/interfaces";
 
-interface LayoutProps {
-    children: React.ReactNode;
-}
  
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<ComponentProps> = ({ children }) => {
     return ( 
         <div>
             <Header />
-            <main>{children}</main>
+            <main className="min-h-screen">{children}</main>
             <Footer />
         </div>
     );
